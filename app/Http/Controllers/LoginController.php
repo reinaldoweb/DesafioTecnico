@@ -40,7 +40,6 @@ class LoginController extends Controller
         $password = $request->get('senha');
 
         $user = new User();
-
         $usuario = $user->where('email', $email)
             ->where('password', $password)
             ->get()
@@ -52,7 +51,7 @@ class LoginController extends Controller
             $_SESSION['nome'] = $usuario->name;
             $_SESSION['email'] = $usuario->email;
 
-            return redirect()->route('site.pedido');
+            return redirect()->route('site.pedido', $_SESSION['nome']   );
         } else {
             return redirect()->route('site.login', ['erro' => 1]);
         }

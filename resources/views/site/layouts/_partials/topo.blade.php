@@ -8,7 +8,7 @@
 
     <div class="menu">
         <ul>
-            <li>{{Session::get('nome')}} </li>
+            <li> </li>
             <li><a href="{{ route('site.index') }}">Home</a></li>
             <li><a href="{{ route('site.pedido') }}">Pedidos</a></li>
             <li><a href="{{ route('site.produto') }}">Produtos</a></li>
