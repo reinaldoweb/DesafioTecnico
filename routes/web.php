@@ -33,7 +33,6 @@ Route::middleware('autenticacao')->prefix('/app')->group(function () {
 Route::get('/sair', 'LoginController@sair')->name('app.sair');
 Route::get('/pedido', 'PedidoController@pedido')->name('app.pedido');
 
-;
 
 Route::resource('produto', 'ProdutoController');
 Route::resource('pedido', 'PedidoController');

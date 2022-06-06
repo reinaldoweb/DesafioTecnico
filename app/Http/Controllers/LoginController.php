@@ -39,11 +39,12 @@ class LoginController extends Controller
         $email = $request->get('usuario');
         $password = $request->get('senha');
 
+
         $user = new User();
         $usuario = $user->where('email', $email)
-            ->where('password', $password)
-            ->get()
-            ->first();
+                    ->where('password', $password)
+                    ->get()
+                    ->first();
 
         if (isset($usuario->name)) {
 
